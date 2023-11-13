@@ -80,3 +80,6 @@ python main.py \
     --lr 0.1 \
     --sorted_dataset_path $SORTED_DATASET_PATH
 ```
+
+## Acknowledgement
+Part of the code is modified from [PT4AL](https://github.com/johnsk95/PT4AL) repo.
