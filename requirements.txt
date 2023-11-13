@@ -1,0 +1,10 @@
+opencv-python-headless
+scikit-learn
+scikit-image
+tqdm
+torch
+torchvision
+Pillow
+
+
+
