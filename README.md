@@ -43,7 +43,7 @@ e.g.
 ```
 
 ## Running the Code
-1. To train the rotation predition task on the unlabeled set:
+1. To train the rotation prediction task on the unlabeled set:
 ```
 python rotation.py \
     --save $SAVE \
