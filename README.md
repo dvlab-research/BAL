@@ -1,5 +1,13 @@
 # BAL: Balancing Diversity and Novelty for Active Learning - Official Pytorch Implementation
 
+Our [paper](https://ieeexplore.ieee.org/document/10372131/) has been accepted by TPAMI.
+
+## Method
+![framework](imgs/framework.png)
+
+## Performance
+![performance](imgs/performance.png)
+
 ## Experiment Setting
 Install the requirements
 ```bash
@@ -42,8 +50,8 @@ e.g.
     ...
 ```
 
-## Running the Code
-1. To train the rotation predition task on the unlabeled set:
+## Active Learning
+1. To train the rotation predition task on the unlabeled set. This step will generate the ```SORTED_DATASET_PATH```.
 ```
 python rotation.py \
     --save $SAVE \
@@ -54,7 +62,7 @@ python rotation.py \
     --batch_size 256
 ```
 
-2. To kmeans cluster pretext features and sort the unlabeled pool:
+2. To kmeans cluster pretext features and sort the unlabeled pool. ```LOAD_DIR``` refers to your pretrained weights.
 ```
 python kmeans.py \
     --net vgg16 \
@@ -79,6 +87,30 @@ python main.py \
     --first high1st \
     --lr 0.1 \
     --sorted_dataset_path $SORTED_DATASET_PATH
+```
+
+## Hyper-parameters
+
+In our paper, we select the optimal beta by evaluating the results of the first epoch. You can directly utilize our experimental outcomes.
+
+| Size   | caltech101 | cifar10 | svhn | tinyimagenet |
+|--------|------------|---------|------|--------------|
+| small  | 0.5        | 1.0     | 1.0  | 0.5          |
+| base   | 1.3        | 1.2     | 1.4  | 1.2          |
+| large  | 2.5        | 2.0     | 2.0  | 2.5          |
+
+## Citation
+If you find our research helpful, kindly cite:
+```
+@ARTICLE{10372131,
+  author={Li, Jingyao and Chen, Pengguang and Yu, Shaozuo and Liu, Shu and Jia, Jiaya},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+  title={BAL: Balancing Diversity and Novelty for Active Learning}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-12},
+  doi={10.1109/TPAMI.2023.3345844}}
 ```
 
 ## Acknowledgement
