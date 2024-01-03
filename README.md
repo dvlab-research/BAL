@@ -91,9 +91,9 @@ python main.py \
 
 ## Hyper-parameters
 
-In our paper, we select the optimal beta by evaluating the results of the first epoch. You can directly utilize our experimental outcomes.
+In our paper, we select the optimal ```beta`` by evaluating the results of the first epoch. You can directly utilize our experimental outcomes.
 
-| Size   | caltech101 | cifar10 | svhn | tinyimagenet |
+| Beta   | caltech101 | cifar10 | svhn | tinyimagenet |
 |--------|------------|---------|------|--------------|
 | small  | 0.5        | 1.0     | 1.0  | 0.5          |
 | base   | 1.3        | 1.2     | 1.4  | 1.2          |
